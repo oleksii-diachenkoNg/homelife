@@ -1,0 +1,47 @@
+#aside {
+  width: 220px;
+  background-color: #f4f4f4;
+  padding: 30px 15px 40px 15px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  grid-area: sidebar;
+}
+
+.navigation-item {
+  margin-bottom: 10px;
+}
+
+.link {
+  display: block;
+  padding: 10px;
+  color: #666;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+
+.user-link {
+  background-color: #e0e0e0;
+  text-align: center;
+}
+
+.user-link img {
+  width: 40px;
+}
+
+.user-link p {
+  margin-top: 5px;
+  font-size: 18px;
+}
+
+.link:hover {
+  background-color: #ddd;
+  color: #000;
+}
+
+.user-link:hover {
+  background-color: #ccc;
+  transform: translateY(-5px);
+}

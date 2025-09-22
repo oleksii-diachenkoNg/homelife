@@ -1,0 +1,32 @@
+#home {
+  height: 100%;
+  display: grid;
+  grid-template-areas:
+    "user-info home todo-list todo-list"
+    "budget budget todo-list todo-list"
+    "budget budget shop-list shop-list"
+    "budget budget shop-list shop-list";
+
+  grid-template-rows: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.home {
+  grid-area: home;
+}
+
+.user-info {
+  grid-area: user-info;
+}
+
+.todo {
+  grid-area: todo-list;
+}
+
+.budget {
+  grid-area: budget;
+}
+
+.shop-list {
+  grid-area: shop-list;
+}

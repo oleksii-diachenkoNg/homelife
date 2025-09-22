@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Sidebar } from './sidebar/sidebar';
+import { Home } from "./home/home";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [Sidebar, Home],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
