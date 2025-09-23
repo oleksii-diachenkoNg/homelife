@@ -1,13 +1,10 @@
 <h2>ToDo</h2>
-<ul>
-  @if(todoList.length == 0) {
+<ul class="todo-list">
+  @if(todoList().length == 0) {
   <li class="todo-item">Всі завдання виконані!</li>
-  } @else { @for (todo of todoList; track $index) {
-  <li class="todo-item">
-    <span>{{ todo.task }}</span>
-  </li>
-  }
-  <li class="todo-item showAll">Show All</li>
-  }
-  <span class="count">{{todoList.length}}</span>
+  } @else { @for (todo of todoList(); track $index) {
+  <li todo-list-item [description]="todo.task"></li>
+  } }
+  <span class="count">{{todoList().length}}</span>
 </ul>
+<button type="button" class="showAll">Show All</button>

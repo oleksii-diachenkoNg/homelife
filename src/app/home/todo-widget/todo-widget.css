@@ -1,10 +1,41 @@
+:host {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100%;
+}
+
+.todo-list {
+  height: 100%;
+  overflow-y: hidden;
+}
+
 .count {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   right: 20px;
-  top: 20px;
+  top: 10px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  padding: 4px 7px;
   font-size: 18px;
+  border: 1px solid #ccc;
+}
+
+.showAll {
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  border-radius: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  box-shadow: 0px -10px 10px rgba(255, 255, 255, 0.3);
+  transition: backgroung-color 0.3s;
+}
+
+.showAll:hover {
+  background-color: #666666;
+  cursor: pointer;
+  color: #ccc;
 }

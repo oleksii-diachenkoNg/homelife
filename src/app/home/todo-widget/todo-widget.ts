@@ -1,15 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, computed, inject } from '@angular/core';
+import { TodoListItem } from './todo-list-item/todo-list-item';
+import { TodoService } from '../../services/todo.service';
+
+interface Task {
+  id: number;
+  task: string;
+  completed: boolean;
+}
 
 @Component({
   selector: 'app-todo-widget',
-  imports: [],
+  imports: [TodoListItem],
   templateUrl: './todo-widget.html',
   styleUrl: './todo-widget.css'
 })
 export class TodoWidget {
-  todoList = [
-    { id: 1, task: 'Buy groceries', completed: false },
-    { id: 2, task: 'Walk the dog', completed: true },
-    { id: 3, task: 'Read a book', completed: false }
-  ]
+  private todoService = inject(TodoService);
+
+  todoList = this.todoService._todoList;
+
+  
 }
