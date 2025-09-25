@@ -3,7 +3,7 @@
   @if(todoList().length == 0) {
   <li class="todo-item">Всі завдання виконані!</li>
   } @else { @for (todo of todoList(); track $index) {
-  <li todo-list-item [description]="todo.task"></li>
+  <li todo-list-item [task]="todo" (done)="removeTask($event)"></li>
   } }
   <span class="count">{{todoList().length}}</span>
 </ul>

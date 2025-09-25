@@ -24,8 +24,6 @@
 }
 
 .showAll {
-  background-color: transparent;
-  border: none;
   font-size: 18px;
   border-radius: 10px;
   padding-top: 5px;
@@ -36,6 +34,5 @@
 
 .showAll:hover {
   background-color: #666666;
-  cursor: pointer;
   color: #ccc;
 }

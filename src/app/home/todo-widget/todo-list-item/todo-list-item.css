@@ -19,7 +19,6 @@
 .complete {
   border: 2px solid #888888;
   border-radius: 10px;
-  cursor: pointer;
   padding: 5px 10px;
   font-size: 13px;
 }
@@ -34,4 +33,6 @@
 .complete:hover {
   transition: transform 0.2s;
   transform: scale(1.1);
+  color: #dddddd;
+  border-color: #dddddd;
 }

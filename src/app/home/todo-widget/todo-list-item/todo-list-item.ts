@@ -1,4 +1,5 @@
-import { Component, input } from '@angular/core';
+import { Component, EventEmitter, input, Output } from '@angular/core';
+import { type Task } from '../../../models/task.model';
 
 @Component({
   selector: 'li[todo-list-item]',
@@ -7,5 +8,10 @@ import { Component, input } from '@angular/core';
   styleUrl: './todo-list-item.css'
 })
 export class TodoListItem {
-  description = input.required<string>();
+  task = input.required<Task>();
+  @Output() done = new EventEmitter<number>();
+
+  markAsDone() { 
+    this.done.emit(this.task().id);
+  }
 }

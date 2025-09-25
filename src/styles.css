@@ -26,3 +26,9 @@ main {
   overflow-y: auto;
   padding: 40px;
 }
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}

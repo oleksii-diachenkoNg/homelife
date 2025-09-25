@@ -19,5 +19,7 @@ export class TodoWidget {
 
   todoList = this.todoService._todoList;
 
-  
+  removeTask(id: number) {
+    this.todoService.removeTask(id);
+  }
 }
