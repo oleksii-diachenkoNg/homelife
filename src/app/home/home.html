@@ -1,18 +1,13 @@
 <div id="home">
-  <div class="user-info" block>
-    <img src="" alt="" />
-    <p>{{ userName }}</p>
-    <p>{{ userSurname }}</p>
+  <div class="user" block>
+    <app-user-widget />
   </div>
 
-  <div class="home" block>
-    <h1>House</h1>
-    <button>Передати показники лічильників</button>
+  <div class="house" block>
+    <app-house-widget />
   </div>
 
   <div class="todo" block><app-todo-widget /></div>
   <div class="budget" block><h1>Budget</h1></div>
-  <div class="shop-list" block>
-    <h1>Shop List</h1>
-  </div>
+  <div class="shop-list" block><app-shop-list-widget /></div>
 </div>

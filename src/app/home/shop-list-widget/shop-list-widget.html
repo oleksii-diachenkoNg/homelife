@@ -1,0 +1,16 @@
+<h2>Shop List</h2>
+<ul class="shop-list">
+  @if(bag().length == 0) {
+  <li class="list-item">Корзина порожня!</li>
+  } @else { @for (product of bag(); track $index) {
+  <li
+    list-item
+    [id]="product.id"
+    [title]="product.product"
+    (done)="removeFromBag($event)"
+    buttonText="Придбано"
+  ></li>
+  } }
+  <span class="count">{{bag().length}}</span>
+</ul>
+<button type="button" class="showAll">Show All</button>

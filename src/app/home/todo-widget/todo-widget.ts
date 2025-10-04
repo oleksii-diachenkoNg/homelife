@@ -1,6 +1,6 @@
-import { Component, computed, inject } from '@angular/core';
-import { TodoListItem } from './todo-list-item/todo-list-item';
+import { Component, inject } from '@angular/core';
 import { TodoService } from '../../services/todo.service';
+import { ListItem } from '../../shared/list-item/list-item';
 
 interface Task {
   id: number;
@@ -10,7 +10,7 @@ interface Task {
 
 @Component({
   selector: 'app-todo-widget',
-  imports: [TodoListItem],
+  imports: [ListItem],
   templateUrl: './todo-widget.html',
   styleUrl: './todo-widget.css'
 })
