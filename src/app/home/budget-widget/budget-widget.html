@@ -1,0 +1,8 @@
+<h2>Budget</h2>
+
+<div class="statistic">
+  <p>Current Budget: {{totalBudget()}}</p>
+  @for(card of cards; track $index ){
+  <app-currency-cell [currency]="card.currency" [balance]="card.balance" />
+  }
+</div>
