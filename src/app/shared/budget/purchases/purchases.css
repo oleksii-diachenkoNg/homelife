@@ -1,0 +1,14 @@
+.purchase {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  padding: 15px 10px;
+  background-color: #888888;
+}
+
+.purchase * {
+  color: #dddddd;
+}
+
+.purchase-amount {
+  text-align: end;
+}

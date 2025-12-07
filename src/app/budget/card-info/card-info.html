@@ -1,0 +1,12 @@
+<h1>Information about first Card</h1>
+<p class="balance">5000 Dollars</p>
+<div class="purchases">
+  <ul class="purchases-list">
+    @for (purchase of purchases; track $index) {
+    <li class="purchase">
+      <p class="purchase-description">{{purchase.shop}}: {{purchase.summ}}</p>
+      <p class="date">{{purchase.date}}</p>
+    </li>
+    }
+  </ul>
+</div>

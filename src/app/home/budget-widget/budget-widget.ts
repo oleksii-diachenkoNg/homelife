@@ -1,35 +1,21 @@
 import { Component, inject } from '@angular/core';
 import { BudgetService } from '../../services/budget.service';
-import { CurrencyCell } from './currency-cell/currency-cell';
+import { CurrencyPipe } from '@angular/common';
+import { BudgetCell } from '../../shared/budget/budget-cell/budget-cell';
+import { Purchases } from '../../shared/budget/purchases/purchases';
 
 @Component({
   selector: 'app-budget-widget',
-  imports: [CurrencyCell],
+  imports: [BudgetCell, Purchases, CurrencyPipe],
   templateUrl: './budget-widget.html',
   styleUrl: './budget-widget.css'
 })
 export class BudgetWidget {
-  budgetService = inject(BudgetService);
-  totalBudget = this.budgetService._totalBudget;
+  private budgetService = inject(BudgetService);
+  purchases = this.budgetService._purchases;
+  cards = this.budgetService._cards
 
-  cards = [
-    {
-      title: 'General Card',
-      cardNum: '2222-2222-2222-2222',
-      balance: '3000',
-      currency: 'USD'
-    },
-    {
-      title: 'General Card',
-      cardNum: '2222-2222-2222-2222',
-      balance: '5000',
-      currency: 'UAH'
-    },
-    {
-      title: 'General Card',
-      cardNum: '2222-2222-2222-2222',
-      balance: '4000',
-      currency: 'EUR'
-    }
-  ]
+  getCurrency(id:number) { 
+    return this.cards().find(e => e.id === id)?.currency;
+  }
 }

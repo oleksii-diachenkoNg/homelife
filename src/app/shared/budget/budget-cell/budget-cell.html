@@ -1,0 +1,9 @@
+<div class="wrapper">
+  <div class="budget-cell">
+    <h3 class="budget-cell_title">{{card().title}}</h3>
+    <p class="budget-cell_quantity">
+      Amount: {{card().balance | currency:card().currency}}
+    </p>
+  </div>
+  <p class="card-number">{{card().cardNum}}</p>
+</div>

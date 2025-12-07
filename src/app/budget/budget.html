@@ -1,0 +1,16 @@
+<header>
+  <h1>Budget Page</h1>
+  <img src="/settings-tool.svg" alt="" />
+</header>
+
+<div class="budget-main">
+  <div class="cards">
+    @for (card of cards(); track $index) {
+    <app-card [card]="card" />
+    }
+  </div>
+
+  <div class="information">
+    <!-- <app-card-info  card=""/> -->
+  </div>
+</div>

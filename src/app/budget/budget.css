@@ -1,0 +1,15 @@
+header {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  column-gap: 40px;
+}
+
+header img {
+  height: 30%;
+}
+
+.cards {
+  display: flex;
+  column-gap: 30px;
+}

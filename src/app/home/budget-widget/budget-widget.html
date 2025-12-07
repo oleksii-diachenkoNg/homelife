@@ -1,8 +1,22 @@
 <h2>Budget</h2>
 
-<div class="statistic">
-  <p>Current Budget: {{totalBudget()}}</p>
-  @for(card of cards; track $index ){
-  <app-currency-cell [currency]="card.currency" [balance]="card.balance" />
+<div class="statistics">
+  <p>Current Budget: 0</p>
+  <!-- {{totalBudget() | currency:"EUR"}} -->
+
+  @for (card of cards(); track $index) {
+  <app-budget-cell [card]="card" />
   }
+
+  <div class="purchases">
+    <h3>Recent Purchases</h3>
+    <div class="purchases_list">
+      @for (purchase of purchases(); track $index) {
+      <app-purchases
+        [purchase]="purchase"
+        [currency]="getCurrency(purchase.cardId)"
+      />
+      }
+    </div>
+  </div>
 </div>

@@ -1,0 +1,7 @@
+<div class="card">
+  <div class="card_number">{{ card().cardNum }}</div>
+  <div class="card_modal">
+    <p>{{card().title}}</p>
+    <p>Balance: {{card().balance | currency:card().currency}}</p>
+  </div>
+</div>
